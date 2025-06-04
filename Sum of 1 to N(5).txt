@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+void SumNto1(int n) {
+    if (n <= 0) {
+        return;
+    }
+
+
+    SumNto1(n - 1); 
+    printf("%i ", n);      
+           
+}
+
+int main() {
+    int n;
+    printf("Enter the number: ");
+    scanf("%i", &n);
+
+    printf("Numbers from 1 to %i :\n", n);
+    SumNto1(n);
+
+    return 0;
+}
