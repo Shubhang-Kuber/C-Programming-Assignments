@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int min = 5, max = 15;
+
+        srand(time(0));
+
+        int random_number = rand() % (max - min + 1) + min;
+
+        printf("%d\n", random_number);  
+   
+}
