@@ -11,6 +11,7 @@ struct NODE *head=NULL;
 
 void insertAtBeginning(int Data);
 void traversal();
+void insertAtEnd(int Data);
 
 int main(){
 
@@ -35,4 +36,23 @@ void traversal(){
         temp=temp->next;
     }
     printf("\n");
+}
+
+void insertAtEnd(int Data){
+    struct NODE *newNode = (struct NODE *)malloc(sizeof(struct NODE));
+    newNode->data = Data;
+    newNode->next=NULL;
+    
+    if(head==NULL){
+        newNode->prev=NULL;
+        head=newNode;
+        return;
+    }
+
+    struct NODE *temp = head;
+    while(temp!=NULL && temp->next!=NULL){
+        temp=temp->next;
+    }
+    temp->next=newNode;
+    newNode->prev=temp;
 }
