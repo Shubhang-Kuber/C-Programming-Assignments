@@ -55,7 +55,7 @@ void traversal(){
         printf("%d->", temp->data);
         temp = temp->prev;
     }
-    printf("NULL\n");
+    printf("HEAD\n");
 
 }
 
