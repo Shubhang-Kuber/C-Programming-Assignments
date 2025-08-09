@@ -14,6 +14,13 @@ void traversal();
 void insertAtEnd(int Data);
 
 int main(){
+    insertAtBeginning(5);
+    insertAtBeginning(4);
+    insertAtBeginning(3);
+    insertAtBeginning(2);
+    insertAtBeginning(1);
+
+    traversal();
 
 }
 
@@ -30,12 +37,26 @@ void insertAtBeginning(int Data){
 }
 
 void traversal(){
-    struct NODE *temp=head;
-    while(temp!=NULL && temp->next!=NULL){
-        printf("%i->", temp->data);
-        temp=temp->next;
+    
+    struct NODE *temp = head;
+    struct NODE *last = NULL;
+
+    printf("Forward Traversal: ");
+    while (temp != NULL) {
+        printf("%d->", temp->data);
+        last = temp; // store last node
+        temp = temp->next;
     }
-    printf("\n");
+    printf("NULL\n");
+
+    printf("Backward Traversal: ");
+    temp = last;
+    while (temp != NULL) {
+        printf("%d->", temp->data);
+        temp = temp->prev;
+    }
+    printf("NULL\n");
+
 }
 
 void insertAtEnd(int Data){
