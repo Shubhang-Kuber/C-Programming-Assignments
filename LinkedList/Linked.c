@@ -50,10 +50,10 @@ void traversal(){
     printf("NULL\n");
 
     printf("Backward Traversal: ");
-    temp = last;
-    while (temp != NULL) {
-        printf("%d->", temp->data);
-        temp = temp->prev;
+    
+    while (last != NULL) {
+        printf("%d->", last->data);
+        last = last->prev;
     }
     printf("HEAD\n");
 
