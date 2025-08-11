@@ -34,7 +34,7 @@ int main(){
     deleteAtBeginning();
     deleteAtEnd();
 
-    
+    traversal(); 
 
 
 }
