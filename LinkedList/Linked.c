@@ -24,6 +24,19 @@ int main(){
 
     traversal();
 
+    insertAtEnd(6);
+    insertAtEnd(7);
+    insertAtEnd(8);
+    insertAtEnd(9);
+
+    traversal();
+
+    deleteAtBeginning();
+    deleteAtEnd();
+
+    
+
+
 }
 
 void insertAtBeginning(int Data){
@@ -105,14 +118,13 @@ void deleteAtEnd(){
         return;
     }
 
-    if (head->next == NULL) {
-        // Only one node
+    if (head->next == NULL) {        
         free(head);
         head = NULL;
         return;
     }
 
-    // More than one node
+    
     struct NODE *last = head;
     while (last->next != NULL) {
         last = last->next;
