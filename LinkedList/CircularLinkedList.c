@@ -49,5 +49,20 @@ void insertAtBeginning(int Data){
 }
 
 void insertAtEnd(int data){
+    struct NODE *newNode = (struct NODE *)malloc(sizeof(struct NODE));
+    newNode->data=data;
 
+    if(head==NULL){
+        newNode->next=newNode;
+        head=newNode;
+        return;
+    }
+
+    newNode->next=head;
+    struct NODE *temp = head;
+
+    while(temp->next!=head){
+        temp=temp->next;
+    }
+    temp->next=newNode;
 }
