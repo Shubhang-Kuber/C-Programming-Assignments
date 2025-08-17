@@ -12,6 +12,7 @@ struct NODE *head=NULL;
 void traversal();
 void insertAtBeginning(int Data);
 void insertAtEnd(int data);
+void deleteAtBeginning();
 
 int main(){
 
@@ -65,4 +66,24 @@ void insertAtEnd(int data){
         temp=temp->next;
     }
     temp->next=newNode;
+}
+
+void deleteAtBeginning(){
+    struct NODE *temp;
+    if(head==NULL){
+        return;
+    }
+    else if(head->next==head){
+        free(head);
+        head=NULL;
+    }
+    else{
+        temp=head;
+        while(temp->next!=head){
+            temp=temp->next;
+        }
+        temp->next=head->next;
+        free(head);
+        head=NULL;
+    }
 }
