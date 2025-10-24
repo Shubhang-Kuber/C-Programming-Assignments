@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int  GCD(int n, int m) {
+    while(n!=m){
+        if(n>m){
+            n=n-m;
+        }
+        else{
+            m=m-n;
+        }
+    }
+    return n;
+}
+
+int main() {
+    int n,m,k;
+    printf("Enter the first number: \n");
+    scanf("%i", &n);
+
+    printf("Enter the second numuber");
+    scanf("%i", &m);
+
+    int k = GCD(n,m);
+
+    printf("The GCD of the numbers is: %i", k);
+
+    return 0;
+}

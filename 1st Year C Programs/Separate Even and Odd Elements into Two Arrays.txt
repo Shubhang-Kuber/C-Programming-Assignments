@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+#include<string.h>
+
+int main(){
+        int n;
+        printf("Enter the size of arrya");
+        scanf("%d",&n);
+
+        int arr[n], arrE[n], arrO[n], e=0, o=0;
+        printf("Enter the elements of array arr\n");
+
+        for(int i=0; i<n; i++){
+                scanf("%d",&arr[i]);
+        }
+
+        for(int i=0; i<n; i++){
+                if(arr[i]%2==0){
+                        arrE[e++]=arr[i];
+                }else{
+                        arrO[o++]=arr[i];
+                }       
+        }
+
+        printf("The even elements array is: %d\n", arr);
+        printf("The odd elements array is: %d\n", arrO);
+
+        
+}

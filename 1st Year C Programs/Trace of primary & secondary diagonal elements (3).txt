@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+
+int main(){
+   int m, sum1=0, sum2=0;
+   printf("Enter the order of the matrix");
+   scanf("%i", &m);
+   int arr[m][m];
+
+   printf("Enter the elements of the matrix");
+   for(int i=0; i<m; i++){
+        for(int j=0; j<m; j++){
+            scanf("%i", &arr[i][j]);
+        }
+   }
+
+   //Sum of primary diagonal elements
+   for(int i=0; i<m; i++){
+    
+        sum1 = sum1+ arr[i][i];    
+   }
+
+   //Sum of secondary elements
+   for(int i=0; i<m; i++){
+    sum2= sum2 + arr[i][m-1-i];
+   }
+
+   printf("The primary elements sum is: %i\n", sum1);
+   printf("The secondary elements sum is: %i\n", sum2);
+
+}
