@@ -29,7 +29,7 @@ void initialize(struct QUEUE *q, int capacity){
     q->front=-1;
     q->rear=-1;
     q->capacity = capacity;
-    q->arr = (int *)malloc(q->capacity *sizeof(int));
+    q->arr = (struct QUEUE *)malloc(q->capacity *sizeof(int));
 }
 
 void enqueue(struct QUEUE *q, int item){
